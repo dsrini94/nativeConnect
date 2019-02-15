@@ -1,0 +1,15 @@
+.news {
+  text-align: left !important;
+  font-size: 18px;
+  font-weight: 350;
+  line-height: 1.7;
+}
+
+.headLines {
+  text-align: left !important;
+  font-family: 'Open Sans', sans-serif;
+  color:#3b5998;
+  font-weight:550;
+  font-size:28px;
+  line-height:1.2;
+}

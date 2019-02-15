@@ -1,0 +1,29 @@
+.uploadImageTitle {
+  text-align: center !important;
+  color:#3b5998;
+  letter-spacing: 2px;
+}
+
+.subHeaders {
+  color:#3b5998;
+  font-weight: 400;
+}
+
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    align-items: center;
+    border: 1px solid #fff;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #3b5998;
+    color:#fff;
+}
+
+.imageName {
+  color:#3b5998;
+  font-size: 18px;
+  padding:3px;
+}
