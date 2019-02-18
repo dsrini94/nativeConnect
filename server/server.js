@@ -9,6 +9,11 @@ app.use('/',(req,res,next) => {
   next();
 });
 
+app.get('/test', (req, res) =>{
+  console.log('Test Route hit!!');
+  res.send('Server Working')
+})
+
 app.listen(PORT, ()=>{
   console.log('NativeConnect server is on');
 });
