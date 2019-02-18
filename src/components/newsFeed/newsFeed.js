@@ -37,7 +37,7 @@ export default class NewsFeed extends Component {
             <Image src='https://cdn-03.independent.ie/sport/soccer/article37811509.ece/3f8b7/AUTOCROP/w620h342/2019-02-13_spo_47954688_I1.JPG' />
           </Grid.Column>
 
-          <Grid.Column width={8} style={{marginLeft:-80}}>
+          <Grid.Column width={8} style={{marginLeft:-30}}>
             <br/>
             <div className="headLines">Manchester United and Paris Saint-Germain both charged by UEFA</div>
             <br/>
