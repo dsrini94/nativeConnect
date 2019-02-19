@@ -1,0 +1,7 @@
+.greenBorder:hover {
+  border:solid 1px green;
+}
+
+.redBorder:hover {
+  border:solid 1px red;
+}

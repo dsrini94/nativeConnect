@@ -5,13 +5,16 @@ import { Menu, Dropdown, Button, Image } from 'semantic-ui-react'
 
 import { Link } from "react-router-dom";
 
+import avatar from './avatar.png';
+import coins from './Coins.png';
+
 
 export default class HomePage extends Component {
 
   constructor(props){
     super(props);
 
-    this.state={activeItem:'NewsConnect'}
+    this.state={activeItem:'NewsConnect',nats:100}
 
     this.handleItemClick = this.handleItemClick.bind(this);
   }
@@ -46,17 +49,21 @@ export default class HomePage extends Component {
             Lists
           </Menu.Item>
 
+          <Menu.Item as={Link} to='/debates'>
+            Debates
+          </Menu.Item>
+
           <Menu.Item as={Link} to='/videoUpload'>
-            Database
+            <Image src={coins} size="tiny" style={styles.image}/>
+            {this.state.nats} Nats
           </Menu.Item>
 
           <Menu.Item style={styles.menuItem}>
-            <Image src="https://openclipart.org/image/2400px/svg_to_png/280156/Faceless-Male-Avatar-In-Suit-2.png" size="tiny" style={styles.image}/>
+            <Image src={avatar} size="tiny" style={styles.image}/>
           </Menu.Item>
 
           <Dropdown item text='Andrew'>
             <Dropdown.Menu>
-              <Dropdown.Item>100 NATs</Dropdown.Item>
               <Dropdown.Item>My Account</Dropdown.Item>
               <Dropdown.Item as={Link} to='/'>SignOut</Dropdown.Item>
             </Dropdown.Menu>
@@ -78,6 +85,7 @@ const styles = {
     color:'white',
     fontSize:25,
     letterSpacing:'5px',
+    cursor:'pointer'
   },
   image:{
     height:35,
