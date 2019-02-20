@@ -11,6 +11,8 @@ import Login from './views/login/login.js';
 import DebatesPage from './views/debatesPage/debatesPage.js';
 import DebatePolitics from './views/debatePolitics/debatePolitics.js';
 import Discussion from './views/discussion/discussion.js';
+import Redeem from './views/redeem/redeem.js';
+
 
 //importing Router package
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
@@ -29,6 +31,7 @@ class App extends Component {
         <Route path="/debates" component={DebatesPage} />
         <Route path="/politics" component={DebatePolitics} />
         <Route path="/discussion" component={Discussion} />
+        <Route path="/redeem" component={Redeem} />
       </div>
       </Router>
     );

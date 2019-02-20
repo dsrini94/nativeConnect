@@ -1,11 +1,44 @@
+
 import React, { Component } from 'react';
 
 import { Button, Icon, Input, Header, Image} from 'semantic-ui-react'
 
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+
+import { Route, Redirect } from 'react-router';
+
+import Home from './../homepage/homepage.js'
 
 
 class LoginPage extends Component {
+
+  constructor(props){
+    super(props);
+
+    this.state = {
+      userName:'',
+      routeName:''
+    }
+
+    this.handleLogin = this.handleLogin.bind(this);
+    this.handleUserName = this.handleUserName.bind(this);
+
+  }
+
+  handleUserName(e){
+    this.setState({userName:e.target.value});
+
+  }
+
+  handleLogin(){
+    if(this.state.userName == 'admin')
+        window.location = '/'
+    else{
+      window.location = '/home'
+    }
+
+  }
+
   render() {
     return (
       <div style={{backgroundColor:'#3b5998',height:'100vh'}}>
@@ -15,18 +48,16 @@ class LoginPage extends Component {
          <Header size='tiny'style={styles.textcolor} >Fill out the form below to login to NewsConnect portal </Header>
               <form>
                 <div style={styles.paddingtop}>
-                  <Input icon='user' iconPosition='left' placeholder='Username' type='Email' style={styles.emailtag}/>
+                  <Input icon='user' iconPosition='left' placeholder='Username' type='Email' style={styles.emailtag} onChange={this.handleUserName}/>
                 </div>
                 <div style={styles.paddingemailtag}>
                   <Input icon='lock' iconPosition='left' placeholder='Username' type='Password' style={styles.emailtag}/>
                 </div>
               </form>
             </div>
-          <Link to="/home">
            <div style={styles.layoutbottom} >
-                 <Button type="submit" size='medium' style={styles.submitbtn}>Login</Button>
+                 <Button type="submit" size='medium' style={styles.submitbtn} onClick={this.handleLogin}>Login</Button>
             </div>
-          </Link>
     </div>
   </div>
     );

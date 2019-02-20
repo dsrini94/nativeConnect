@@ -53,10 +53,19 @@ export default class HomePage extends Component {
             Debates
           </Menu.Item>
 
-          <Menu.Item as={Link} to='/videoUpload'>
+          <Menu.Item as={Link} to='/redeem'>
             <Image src={coins} size="tiny" style={styles.image}/>
             {this.state.nats} Nats
           </Menu.Item>
+
+
+
+
+          <Dropdown item icon="bell">
+            <Dropdown.Menu>
+              <Dropdown.Item>You have earned 25 Nats</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
 
           <Menu.Item style={styles.menuItem}>
             <Image src={avatar} size="tiny" style={styles.image}/>
