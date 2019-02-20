@@ -63,6 +63,6 @@ const styles = {
   },
   button:{
     zIndex:999,
-    marginRight:25
+    marginRight:20,
   },
 }
