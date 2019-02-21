@@ -125,8 +125,6 @@ export default class ReviewerImageTiles extends Component {
       <div>
         <br />
           <div style={{marginLeft:'80%'}}>
-
-
           <Search
               loading={isLoading}
               onResultSelect={this.handleResultSelect  }
@@ -136,7 +134,7 @@ export default class ReviewerImageTiles extends Component {
               {...this.props}
             />
         <Modal open={this.state.modalOpen} >
-            <Modal.Header>Leader's Communication</Modal.Header>
+            <Modal.Header>Leader's Communication </Modal.Header>
             <Modal.Content image >
               <Image style={styles.size} src="https://c.o0bg.com/rf/image_960w/Boston/2011-2020/2014/09/17/BostonGlobe.com/Lifestyle/Images/AP6106020131asdfA.jpg" />
               <Modal.Description>
@@ -147,7 +145,7 @@ export default class ReviewerImageTiles extends Component {
             <Modal.Actions>
 
               <Button color='green' onClick={()=>{this.setState({modalOpen:false})}}>
-                <Icon name='checkmark' /> close
+                 close
               </Button>
             </Modal.Actions>
           </Modal>
@@ -155,7 +153,7 @@ export default class ReviewerImageTiles extends Component {
             </div>
          <br /> <br />
         <Grid>
-          <Grid.Row centered>
+          <Grid.Row centered style={{marginBottom:20}}>
             <Grid.Column width={3}>
             <Reveal animated='small fade' style={styles.size} onClick={this.imageSelected}>
               <Reveal.Content visible>
@@ -232,7 +230,7 @@ export default class ReviewerImageTiles extends Component {
             </Grid.Column>
           </Grid.Row>
 
-          <Grid.Row centered>
+          <Grid.Row centered style={{marginBottom:20}}>
             <Grid.Column width={3}>
             <Reveal animated='small fade' style={styles.size} onClick={this.imageSelected}>
               <Reveal.Content visible>
@@ -309,7 +307,7 @@ export default class ReviewerImageTiles extends Component {
             </Grid.Column>
           </Grid.Row>
 
-          <Grid.Row centered>
+          <Grid.Row centered style={{marginBottom:20}}>
             <Grid.Column width={3}>
             <Reveal animated='small fade' style={styles.size} onClick={this.imageSelected}>
               <Reveal.Content visible>
