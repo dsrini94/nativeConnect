@@ -3,44 +3,35 @@ import React, { Component } from 'react';
 
 import { Button, Icon, Input, Header, Image} from 'semantic-ui-react'
 
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-import { Route, Redirect } from 'react-router';
+// import { Route, Redirect } from 'react-router';
 
 import Home from './../homepage/homepage.js'
 
 
 class LoginPage extends Component {
 
-<<<<<<< HEAD
-=======
-
->>>>>>> a16bd43246682587420c16acc5673117a4c29e5e
   constructor(props){
     super(props);
 
     this.state = {
-      userName:''
+      userName:'',
+      routeName:'/home'
     }
 
-    this.handleLogin = this.handleLogin.bind(this);
     this.handleUserName = this.handleUserName.bind(this);
 
   }
 
   handleUserName(e){
-    this.setState({userName:e.target.value});
-  }
-
-  handleLogin(){
-    if(this.state.userName == 'admin')
-        window.location = '/adminVerify'
-    else
-      window.location = '/home'
+    this.setState({userName:e.target.value},()=>{
+        if(this.state.userName == 'admi'){
+          this.setState({routeName:'/adminVerify'});
+        }
+    });
 
   }
-
-
 
   render() {
     return (
@@ -62,7 +53,7 @@ class LoginPage extends Component {
             </div>
 
            <div style={styles.layoutbottom} >
-                 <Button type="submit" size='medium' style={styles.submitbtn} onClick={this.handleLogin}>Login</Button>
+                 <Button as={Link} to={this.state.routeName} type="submit" size='medium' style={styles.submitbtn}>Login</Button>
             </div>
     </div>
   </div>

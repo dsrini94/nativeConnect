@@ -36,16 +36,10 @@ class App extends Component {
         <Route path="/debates" component={DebatesPage} />
         <Route path="/politics" component={DebatePolitics} />
         <Route path="/discussion" component={Discussion} />
-<<<<<<< HEAD
         <Route path="/redeem" component={Redeem} />
-=======
-
         <Route path="/adminVerify" component={AdminHome} />
         <Route path="/adminVideo" component={AdminVideo} />
         <Route path="/adminImage" component={AdminImage} />
-
-
->>>>>>> a16bd43246682587420c16acc5673117a4c29e5e
       </div>
       </Router>
     );
