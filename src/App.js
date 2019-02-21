@@ -34,12 +34,9 @@ class App extends Component {
         <Route path="/debates" component={DebatesPage} />
         <Route path="/politics" component={DebatePolitics} />
         <Route path="/discussion" component={Discussion} />
-
         <Route path="/adminVerify" component={AdminHome} />
         <Route path="/adminVideo" component={AdminVideo} />
         <Route path="/adminImage" component={AdminImage} />
-
-
       </div>
       </Router>
     );
