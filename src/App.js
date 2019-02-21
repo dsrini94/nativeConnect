@@ -10,6 +10,8 @@ import Login from './views/login/login.js';
 import DebatesPage from './views/debatesPage/debatesPage.js';
 import DebatePolitics from './views/debatePolitics/debatePolitics.js';
 import Discussion from './views/discussion/discussion.js';
+import Redeem from './views/redeem/redeem.js';
+
 
 import AdminHome from './views/adminHome/adminHome.js'
 import AdminVideo from './views/adminVideo/adminvideo.js'
@@ -34,6 +36,7 @@ class App extends Component {
         <Route path="/debates" component={DebatesPage} />
         <Route path="/politics" component={DebatePolitics} />
         <Route path="/discussion" component={Discussion} />
+        <Route path="/redeem" component={Redeem} />
         <Route path="/adminVerify" component={AdminHome} />
         <Route path="/adminVideo" component={AdminVideo} />
         <Route path="/adminImage" component={AdminImage} />

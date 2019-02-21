@@ -1,36 +1,37 @@
+
 import React, { Component } from 'react';
 
 import { Button, Input, Header,} from 'semantic-ui-react'
 
 import { Link } from "react-router-dom";
 
+// import { Route, Redirect } from 'react-router';
+
+import Home from './../homepage/homepage.js'
+
 
 class LoginPage extends Component {
+
   constructor(props){
     super(props);
 
     this.state = {
-      userName:''
+      userName:'',
+      routeName:'/home'
     }
 
-    this.handleLogin = this.handleLogin.bind(this);
     this.handleUserName = this.handleUserName.bind(this);
 
   }
 
   handleUserName(e){
-    this.setState({userName:e.target.value});
+    this.setState({userName:e.target.value},()=>{
+        if(this.state.userName == 'admi'){
+          this.setState({routeName:'/adminVerify'});
+        }
+    });
+
   }
-
-  handleLogin(e){
-    e.preventDefault();
-    if(this.state.userName == 'admin')
-        window.location.href = '/adminVerify'
-    else
-      window.location.href = '/home'
-  }
-
-
 
   render() {
     return (
@@ -51,7 +52,7 @@ class LoginPage extends Component {
             </div>
 
            <div style={styles.layoutbottom} >
-                 <Button type="submit" size='medium' style={styles.submitbtn} onClick={this.handleLogin}>Login</Button>
+                 <Button as={Link} to={this.state.routeName} type="submit" size='medium' style={styles.submitbtn}>Login</Button>
             </div>
     </div>
   </div>
