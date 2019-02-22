@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Header, Grid, Image, Item } from 'semantic-ui-react'
+import { Header, Grid, Item } from 'semantic-ui-react'
 
 export default class Credits extends Component {
   render(){

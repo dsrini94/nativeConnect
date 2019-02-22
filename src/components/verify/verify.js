@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import { TextArea, Input, Grid, Button, Divider, Image, Header } from 'semantic-ui-react';
 
-import Appbar from './../../components/appbar/appbar.js'
 
 import './verify.css';
 

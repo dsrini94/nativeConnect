@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Image, Header, Button, Menu, Grid } from 'semantic-ui-react'
+import { Image, Header, Button} from 'semantic-ui-react'
 
 import background from './background.jpeg';
 
@@ -18,7 +18,7 @@ export default class DebatesPage extends Component {
   render(){
     return(
       <div style={styles.container}>
-        <Image src={background} style={{width:window.innerWidth+14}}/>
+        <Image src={background} style={{width:window.innerWidth+14,marginTop:14}}/>
         <div style={styles.textContainer}>
           <center><Header as={'h1'} inverted style={styles.text}>Explore Discussions</Header></center>
           <br/>

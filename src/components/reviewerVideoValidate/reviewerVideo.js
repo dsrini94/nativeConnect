@@ -12,7 +12,7 @@ export default class ReviewerVideoTiles extends Component {
         <Grid >
           <Grid.Row centered style={{marginTop:10}}>
             <Grid.Column width={3} >
-            <Embed id='ptxLsJ-22Y8' placeholder='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxeu_snKl4CV1rtNq8_u5iP4nMPetZxVaf64JoDdEWyqCYJ6-d' source='youtube' />
+            <Embed id='ptxLsJ-22Y8'  placeholder='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxeu_snKl4CV1rtNq8_u5iP4nMPetZxVaf64JoDdEWyqCYJ6-d' source='youtube' />
             <Button color='blue' style={{marginLeft:50, marginTop:10 }}> Use Video </Button>
             </Grid.Column>
             <Grid.Column width={3} >

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Image, Header, Button, Menu, Grid } from 'semantic-ui-react'
+import { Image, Header, Menu, Grid } from 'semantic-ui-react'
 
 export default class DebateHomeTile extends Component {
 

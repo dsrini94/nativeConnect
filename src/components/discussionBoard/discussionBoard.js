@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import Appbar from './../../components/appbar/appbar.js'
 
 import { Segment, Header, Rating, Icon, Grid, Button } from 'semantic-ui-react'
 
@@ -9,7 +8,7 @@ import './discussionBoard.css'
 export default class DiscussionBoard extends Component {
   render(){
     return(
-      <div style={{backgroundColor:'#e8eaed',marginTop:-20}}>
+      <div style={{backgroundColor:'#e8eaed',marginTop:14}}>
 
         <div style={styles.proConContainer}>
         </div>

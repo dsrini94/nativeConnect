@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 
 import { Grid, Image, Button, Header,  Modal } from 'semantic-ui-react'
 
-import Appbar from './../../components/appbar/appbar.js'
-
-
 export default class ReviewerVerify extends Component {
   render(){
     return(

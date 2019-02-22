@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 
-import { Image, Header, Button, Menu, Grid } from 'semantic-ui-react'
+import { Image, Header } from 'semantic-ui-react'
 
 import politics from './politics.jpeg';
-
-//importing Router package
-import { Link } from "react-router-dom";
 
 export default class DebatesPage extends Component {
 
@@ -18,7 +15,7 @@ export default class DebatesPage extends Component {
   render(){
     return(
       <div style={styles.container}>
-        <Image src={politics} style={{width:window.innerWidth+14}}/>
+        <Image src={politics} style={{width:window.innerWidth+14,marginTop:14}}/>
         <div style={styles.textContainer}>
           <center><Header as={'h1'} inverted style={styles.text}>Discus and Debate #Politics</Header></center>
           <br/>

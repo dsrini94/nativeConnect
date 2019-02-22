@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 
 import {Search, Grid, Image, Reveal, Button,Header, Modal,Icon } from 'semantic-ui-react'
 
-let points = 100;
 export default class ReviewerImageTiles extends Component {
   constructor(props){
     super(props);
@@ -398,12 +397,13 @@ img:''
          </Modal.Content>
          <Modal.Actions>
            <Button color='black' onClick={()=>{this.setState({model1open:false})}}>
+           <Icon name ='x'/>
              No
            </Button>
            <Button
              positive
              icon='checkmark'
-             labelPosition='right'
+             labelPosition='left'
              content="Yes"
              onClick={()=>{this.setState({model1open:false, model2open:true})}}
            />
