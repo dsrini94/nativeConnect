@@ -4,6 +4,21 @@ import {Search, Grid, Image, Reveal, Button,Header, Input , } from 'semantic-ui-
 
 
 export default class ReviewerImageTiles extends Component {
+
+  constructor(props){
+    super(props);
+
+  }
+
+  componentDidMount(){
+    if(typeof(Storage) !== undefined){
+
+    }
+    else{
+      console.log('it is not present');
+    }
+  }
+
   render(){
     return(
       <div>

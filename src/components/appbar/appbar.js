@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 //importing semantic-ui elements
-import { Menu, Dropdown, Button, Image } from 'semantic-ui-react'
+import { Menu, Dropdown, Button, Image, Label } from 'semantic-ui-react'
 
 import { Link } from "react-router-dom";
 
@@ -14,9 +14,27 @@ export default class HomePage extends Component {
   constructor(props){
     super(props);
 
-    this.state={activeItem:'NewsConnect',nats:100}
+    this.state={activeItem:'NewsConnect',nats:100,comp:''}
 
     this.handleItemClick = this.handleItemClick.bind(this);
+  }
+
+  componentDidMount(){
+
+    var comp = (
+      <Label style={{postion:'absolute',marginLeft:-25,marginTop:7,height:25,width:30}}>
+        0
+      </Label>
+    )
+
+    this.setState({comp:comp})
+
+    if(typeof(Storage) !== undefined)
+    {
+      console.log(localStorage.getItem("notifications"));
+    }
+    else
+      console.log('No it is not present');
   }
 
    handleItemClick = (e, { name }) => this.setState({ activeItem: name })
@@ -45,10 +63,6 @@ export default class HomePage extends Component {
             Video
           </Menu.Item>
 
-          <Menu.Item as={Link} to='/videoUpload'>
-            Lists
-          </Menu.Item>
-
           <Menu.Item as={Link} to='/debates'>
             Debates
           </Menu.Item>
@@ -61,11 +75,13 @@ export default class HomePage extends Component {
 
 
 
-          <Dropdown item icon="bell">
+          <Dropdown item icon="bell" >
             <Dropdown.Menu>
               <Dropdown.Item>You have earned 25 Nats</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
+
+          {this.state.comp}
 
           <Menu.Item style={styles.menuItem}>
             <Image src={avatar} size="tiny" style={styles.image}/>
