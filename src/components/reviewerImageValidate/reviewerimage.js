@@ -74,13 +74,19 @@ export default class ReviewerImageTiles extends Component {
  isloading: false,
  value:"",
  modalOpen:false,
- results:[]
-
+ results:[],
+ model1open: false,
+ model2open: false,
+title:'',
+owner:'',
+img:''
     }
     this.resetComponent = this.resetComponent.bind(this);
     this.handleResultSelect = this.handleResultSelect.bind(this);
     this.handleSearchChange = this.handleSearchChange.bind(this);
     this.onItemClickHandler = this.onItemClickHandler.bind(this)
+    this.imageSelected = this.imageSelected.bind(this);
+    this.rewardNats = this.rewardNats.bind(this);
   }
 
   componentWillMount() {
@@ -108,15 +114,20 @@ export default class ReviewerImageTiles extends Component {
     }, 300)
   }
 
-  imageSelected(){
-    console.log("got the value", +points);
-    alert("25 Nats credited to user account")
-    points = points + 25;
-    console.log("new value is ", +points);
+  imageSelected(img,title,owner){
+    console.log("clicked");
+    this.setState({model1open:true,img:img,title:title,owner:owner})
   }
 
   onItemClickHandler(){
     console.log("clicked");
+  }
+
+  rewardNats(){
+    if(typeof(Storage !== undefined)){
+      localStorage.setItem("notifications", "25");
+      this.setState({model2open:false});
+    }
   }
 
   render(){
@@ -155,7 +166,7 @@ export default class ReviewerImageTiles extends Component {
         <Grid>
           <Grid.Row centered style={{marginBottom:20}}>
             <Grid.Column width={3}>
-            <Reveal animated='small fade' style={styles.size} onClick={this.imageSelected}>
+            <Reveal animated='small fade' style={styles.size} onClick={()=>this.imageSelected('https://si.wsj.net/public/resources/images/BN-XR862_IRAQjp_GR_20180301134846.jpg','Pulwama Attack','Andrew')}>
               <Reveal.Content visible>
                 <Image style={styles.size} src="https://si.wsj.net/public/resources/images/BN-XR862_IRAQjp_GR_20180301134846.jpg" />
                 <Header as='h4' style={{margin:0, textAlign:'center', }}> Pulwama Attack </Header>
@@ -385,6 +396,41 @@ export default class ReviewerImageTiles extends Component {
           </Grid.Row>
 
         </Grid>
+        <Modal open={this.state.model1open} >
+         <Modal.Header>{this.state.owner}'s Photo</Modal.Header>
+         <Modal.Content image>
+           <Image wrapped size='huge' src={this.state.img} />
+           <Modal.Description>
+             <Header>{this.state.title}</Header>
+             <p>All the CRPF soldiers were customers of the Bank under Defence Salary Package where the bank provides insurance of Rupees 30 lacs to each of the defence personnel," the bank said in a statement. "The bank is taking steps to expedite release of insurance money to the next of kin of the martyred soldiers," it added.
+       23 soldiers had also availed of loans from SBI and the bank has decided to waive off all the outstanding loans with immediate effect.</p>
+             <p>Do you really want to use?</p>
+           </Modal.Description>
+         </Modal.Content>
+         <Modal.Actions>
+           <Button color='black' onClick={()=>{this.setState({model1open:false})}}>
+             No
+           </Button>
+           <Button
+             positive
+             icon='checkmark'
+             labelPosition='right'
+             content="Yes"
+             onClick={()=>{this.setState({model1open:false, model2open:true})}}
+           />
+         </Modal.Actions>
+       </Modal>
+
+       <Modal open={this.state.model2open}  size='small'>
+    <Header> <Icon name="currency" />{this.state.owner} will be rewarded with 25 NATs </ Header>
+
+    <Modal.Actions>
+      <Button basic color='green'  onClick={this.rewardNats}>
+        <Icon name='checkmark' /> ok
+      </Button>
+
+    </Modal.Actions>
+  </Modal>
       </div>
     );
   }
