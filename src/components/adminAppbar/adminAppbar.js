@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
 //importing semantic-ui elements
-import { Menu, Dropdown, Button, Image } from 'semantic-ui-react'
+import { Menu, Dropdown, Image } from 'semantic-ui-react'
 
 import { Link } from "react-router-dom";
 
 import avatar from './avatar.png';
-import coins from './Coins.png';
+//import coins from './Coins.png';
 
 
 export default class AdminHomePage extends Component {

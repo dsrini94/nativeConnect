@@ -12,7 +12,7 @@ export default class ReviewerImageTiles extends Component {
 
   componentDidMount(){
     if(typeof(Storage) !== undefined){
-
+      
     }
     else{
       console.log('it is not present');

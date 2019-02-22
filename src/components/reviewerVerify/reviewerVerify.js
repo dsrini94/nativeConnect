@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Grid, Image, Button, Header, Popup, Modal } from 'semantic-ui-react'
+import { Grid, Image, Button, Header,  Modal } from 'semantic-ui-react'
 
 import Appbar from './../../components/appbar/appbar.js'
 

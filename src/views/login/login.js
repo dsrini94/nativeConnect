@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 
-import { Button, Icon, Input, Header, Image} from 'semantic-ui-react'
+import { Button, Input, Header,} from 'semantic-ui-react'
 
 import { Link } from "react-router-dom";
 
@@ -39,10 +39,9 @@ class LoginPage extends Component {
       <div style={styles.paddingcenter}>
         <div style={styles.layout}>
          <Header size='huge' style={styles.topheading}> NewsConnect</Header>
-         <Header size='tiny'style={styles.textcolor} >Fill out the form below to login to NewsConnect portal </Header>
+         <Header size='tiny'style={styles.textcolor} >Login to NewsConnect portal </Header>
               <form>
                 <div style={styles.paddingtop}>
-
                   <Input icon='user' iconPosition='left' placeholder='Username' type='Email' style={styles.emailtag} onChange={this.handleUserName}/>
 
                 </div>
