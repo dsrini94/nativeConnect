@@ -24,7 +24,7 @@ export default class AdminHomePage extends Component {
   render(){
     return(
       <Menu inverted color="blue" secondary size="massive">
-      <Menu.Item disabled as={Link} to='/home'
+      <Menu.Item disabled as={Link} to='/adminVerify'
           name='NewsConnect'
           active={this.state.activeItem === 'NewsConnec'}
           onClick={this.handleItemClick}>

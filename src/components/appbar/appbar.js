@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 //importing semantic-ui elements
-import { Menu, Dropdown, Button, Image, Label } from 'semantic-ui-react'
+import { Menu, Dropdown, Button, Image, Label, Modal, Header, Icon } from 'semantic-ui-react'
 
 import { Link } from "react-router-dom";
 
@@ -14,24 +14,28 @@ export default class HomePage extends Component {
   constructor(props){
     super(props);
 
-    this.state={activeItem:'NewsConnect',nats:100,comp:''}
+    this.state={activeItem:'NewsConnect',nats:100,comp:'',modalOpen:false}
 
     this.handleItemClick = this.handleItemClick.bind(this);
   }
 
   componentDidMount(){
 
-    var comp = (
-      <Label style={{postion:'absolute',marginLeft:-25,marginTop:7,height:25,width:30}}>
-        0
-      </Label>
-    )
-
-    this.setState({comp:comp})
-
     if(typeof(Storage) !== undefined)
     {
-      console.log(localStorage.getItem("notifications"));
+      if(localStorage.getItem("notifications"))
+      {
+        var points = parseInt(localStorage.getItem("notifications")) + this.state.nats;
+        this.setState({nats:points},()=>{
+          localStorage.removeItem("notifications");
+          var comp = (
+            <Label style={{postion:'absolute',marginLeft:-25,marginTop:7,height:25,width:30}}>
+              1
+            </Label>
+          )
+          this.setState({comp:comp});
+        });
+      }
     }
     else
       console.log('No it is not present');
@@ -41,6 +45,7 @@ export default class HomePage extends Component {
 
   render(){
     return(
+      <div>
       <Menu inverted color="blue" secondary size="massive">
       <Menu.Item disabled as={Link} to='/home'
           name='NewsConnect'
@@ -72,12 +77,9 @@ export default class HomePage extends Component {
             {this.state.nats} Nats
           </Menu.Item>
 
-
-
-
           <Dropdown item icon="bell" >
             <Dropdown.Menu>
-              <Dropdown.Item>You have earned 25 Nats</Dropdown.Item>
+              <Dropdown.Item onClick={()=>{this.setState({modalOpen:true})}}>You have earned 25 Nats</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
 
@@ -100,6 +102,24 @@ export default class HomePage extends Component {
 
         </Menu.Menu>
       </Menu>
+      <Modal open={this.state.modalOpen}>
+        <Modal.Header>Select a Photo</Modal.Header>
+        <Modal.Content image>
+          <Modal.Description>
+            <Header>Congrats you have earned 25 Nats</Header>
+          </Modal.Description>
+        </Modal.Content>
+
+        <Modal.Actions>
+          <Button as={Link} to='/redeem' color='green' inverted>
+            <Icon name='currency' /> Redeem NATs
+          </Button>
+          <Button color='red' onClick={()=>this.setState({modalOpen:false,comp:''})} inverted>
+            <Icon name='close' />Close
+          </Button>
+        </Modal.Actions>
+      </Modal>
+    </div>
     );
   }
 }

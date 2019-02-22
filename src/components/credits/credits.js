@@ -6,6 +6,7 @@ export default class Credits extends Component {
   render(){
     return(
       <div>
+        <br/>
         <center><Header as='h1' color="blue">Premium Articles</Header></center>
         <br/>
         <Grid padded>
