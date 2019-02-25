@@ -12,7 +12,6 @@ import DebatePolitics from './views/debatePolitics/debatePolitics.js';
 import Discussion from './views/discussion/discussion.js';
 import Redeem from './views/redeem/redeem.js';
 
-
 import AdminHome from './views/adminHome/adminHome.js'
 import AdminVideo from './views/adminVideo/adminvideo.js'
 import AdminImage from './views/adminImage/adminimage.js'

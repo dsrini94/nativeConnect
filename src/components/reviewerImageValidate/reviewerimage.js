@@ -160,6 +160,7 @@ img:''
           </Modal>
             </div>
          <br /> <br />
+
         <Grid>
           <Grid.Row centered style={{marginBottom:20}}>
             <Grid.Column width={3}>
@@ -384,6 +385,7 @@ img:''
             </Grid.Column>
           </Grid.Row>
         </Grid>
+
         <Modal open={this.state.model1open} >
          <Modal.Header>{this.state.owner}'s Photo</Modal.Header>
          <Modal.Content image>
@@ -409,6 +411,7 @@ img:''
            />
          </Modal.Actions>
        </Modal>
+
        <Modal open={this.state.model2open}  size='small'>
     <Header> <Icon name="currency" />{this.state.owner} will be rewarded with 25 NATs </Header>
     <Modal.Actions>

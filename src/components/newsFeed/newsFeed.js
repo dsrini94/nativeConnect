@@ -3,11 +3,15 @@ import React, { Component } from 'react';
 //importing semantic-ui elements
 import { Grid, Image, Card, Icon } from 'semantic-ui-react';
 
+import { Link } from "react-router-dom";
 //importing css
 import './newsFeed.css'
 
 const extra = (
   <div>
+  <a style={{marginRight:'10px'}}>
+    <Icon name='eye' size="large"/>
+  </a>
   <a style={{marginRight:'10px'}}>
     <Icon name='image' size="large"/>
   </a>
@@ -46,15 +50,18 @@ export default class NewsFeed extends Component {
 
             <br/>
             <div style={{float:'right'}}>
-            <a style={{marginRight:'10px'}}>
-              <Icon name='image' size="large"/>
-            </a>
-            <a style={{marginRight:'10px'}}>
-              <Icon name='video' size="large"/>
-            </a>
-            <a>
-              <Icon name='database' size="large"/>
-            </a>
+            <Link to='/verify' style={{marginRight:'10px'}}>
+              <Icon name='eye' size="large" />
+            </Link>
+            <Link to='/imageUpload' style={{marginRight:'10px'}}>
+              <Icon name='image' size="large" />
+            </Link>
+            <Link to='/videoUpload' style={{marginRight:'10px'}}>
+              <Icon name='video' size="large" />
+            </Link>
+            <Link to='/debates' style={{marginRight:'10px'}}>
+              <Icon name='database' size="large" />
+            </Link>
           </div>
           </Grid.Column>
         </Grid.Row>
