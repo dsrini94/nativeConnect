@@ -13,14 +13,11 @@ export default class HomePage extends Component {
 
   constructor(props){
     super(props);
-
     this.state={activeItem:'NewsConnect',nats:100,comp:'',modalOpen:false}
-
     this.handleItemClick = this.handleItemClick.bind(this);
   }
 
   componentDidMount(){
-
     if(typeof(Storage) !== undefined)
     {
       if(localStorage.getItem("notifications"))

@@ -5,11 +5,6 @@ import { Grid, Image } from 'semantic-ui-react'
 
 export default class ImageTiles extends Component {
 
-  constructor(props){
-    super(props);
-
-  }
-
   render(){
     return(
       <div>

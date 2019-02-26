@@ -5,11 +5,6 @@ import { Button, Input, Header,} from 'semantic-ui-react'
 
 import { Link } from "react-router-dom";
 
-// import { Route, Redirect } from 'react-router';
-
-import Home from './../homepage/homepage.js'
-
-
 class LoginPage extends Component {
 
   constructor(props){
@@ -26,7 +21,7 @@ class LoginPage extends Component {
 
   handleUserName(e){
     this.setState({userName:e.target.value},()=>{
-        if(this.state.userName == 'admi'){
+        if(this.state.userName === 'admi'){
           this.setState({routeName:'/adminVerify'});
         }
     });

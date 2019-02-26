@@ -9,16 +9,16 @@ import './newsFeed.css'
 
 const extra = (
   <div>
-  <a style={{marginRight:'10px'}}>
+  <a href='/verify' style={{marginRight:'10px'}}>
     <Icon name='eye' size="large"/>
   </a>
-  <a style={{marginRight:'10px'}}>
+  <a href='/imageUpload'  style={{marginRight:'10px'}}>
     <Icon name='image' size="large"/>
   </a>
-  <a style={{marginRight:'10px'}}>
+  <a href='/videoUpload'  style={{marginRight:'10px'}}>
     <Icon name='video' size="large"/>
   </a>
-  <a>
+  <a href='/debates' >
     <Icon name='database' size="large"/>
   </a>
 </div>

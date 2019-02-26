@@ -44,11 +44,7 @@ const styles = {
   },
   text:{
     fontSize:55,
-
     fontWeight:450,
-
-    fontWeight:500
-
   },
   button:{
     zIndex:999,
