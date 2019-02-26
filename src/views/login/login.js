@@ -33,8 +33,8 @@ class LoginPage extends Component {
       <div style={{backgroundColor:'#3b5998',height:'100vh'}}>
       <div style={styles.paddingcenter}>
         <div style={styles.layout}>
-         <Header size='huge' style={styles.topheading}> NewsConnect</Header>
-         <Header size='tiny'style={styles.textcolor} >Login to NewsConnect portal </Header>
+         <Header size='huge' style={styles.topheading}> ENGAGE</Header>
+         <Header size='tiny'style={styles.textcolor} >Login to ENGAGE portal </Header>
               <form>
                 <div style={styles.paddingtop}>
                   <Input icon='user' iconPosition='left' placeholder='Username' type='Email' style={styles.emailtag} onChange={this.handleUserName}/>

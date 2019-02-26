@@ -28,7 +28,7 @@ export default class AdminHomePage extends Component {
           name='NewsConnect'
           active={this.state.activeItem === 'NewsConnec'}
           onClick={this.handleItemClick}>
-          <span style={styles.title}>NewsConnect</span>
+          <span style={styles.title}>ENGAGE</span>
         </Menu.Item>
 
         <Menu.Menu position='right'>
@@ -72,7 +72,8 @@ const styles = {
     color:'white',
     fontSize:25,
     letterSpacing:'5px',
-    cursor:'pointer'
+    cursor:'pointer',
+    marginLeft: 25
   },
   image:{
     height:35,
