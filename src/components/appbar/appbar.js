@@ -44,11 +44,15 @@ export default class HomePage extends Component {
     return(
       <div>
       <Menu inverted color="blue" secondary size="massive">
+
+      <Menu.Item as={Link} to='/home'>
+        <Image style={{height:50,width:50,marginRight:0}} src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Associated_Press_logo_2012.svg/873px-Associated_Press_logo_2012.svg.png" />
+      </Menu.Item>
       <Menu.Item disabled as={Link} to='/home'
           name='NewsConnect'
           active={this.state.activeItem === 'NewsConnec'}
           onClick={this.handleItemClick}>
-          <span style={styles.title}>ENGAGE</span>
+          <span style={styles.title}>Associated Press</span>
         </Menu.Item>
 
         <Menu.Menu position='right'>
@@ -128,7 +132,7 @@ const styles = {
     fontSize:25,
     letterSpacing:'5px',
     cursor:'pointer',
-    marginLeft: 25
+    marginLeft: -20
   },
   image:{
     height:35,

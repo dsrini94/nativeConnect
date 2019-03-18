@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 
-import { Button, Input, Header,} from 'semantic-ui-react'
+import { Button, Input, Header, Image} from 'semantic-ui-react'
 
 import { Link } from "react-router-dom";
 
@@ -33,8 +33,9 @@ class LoginPage extends Component {
       <div style={{backgroundColor:'#3b5998',height:'100vh'}}>
       <div style={styles.paddingcenter}>
         <div style={styles.layout}>
-         <Header size='huge' style={styles.topheading}> ENGAGE</Header>
-         <Header size='tiny'style={styles.textcolor} >Login to ENGAGE portal </Header>
+         <Image style={{height:50,width:50,float:'left',marginTop:13,marginRight:9,marginLeft:-20}} src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Associated_Press_logo_2012.svg/873px-Associated_Press_logo_2012.svg.png" />
+         <Header size='large' style={styles.topheading}>Associated Press</Header>
+         <Header size='tiny'style={styles.textcolor} >Login to Associated Press portal </Header>
               <form>
                 <div style={styles.paddingtop}>
                   <Input icon='user' iconPosition='left' placeholder='Username' type='Email' style={styles.emailtag} onChange={this.handleUserName}/>
@@ -64,7 +65,7 @@ const styles = {
     marginLeft:'20%', marginTop:30,  borderRadius:10, paddingLeft: 30, paddingRight: 30, backgroundColor:'white', color: '#3b5998',
   },
   topheading:{
-    paddingTop: 20, letterSpacing: 2, fontSize:'2.8rem', fontWeight:500, color: '#3b5998', height:55,
+    paddingTop: 20, letterSpacing: 2, fontSize:'2.4rem', fontWeight:500, color: '#3b5998', height:55,
   },
 imgtag:{
   height:130, width:130, marginLeft:'36%'
